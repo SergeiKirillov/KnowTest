@@ -36,12 +36,14 @@
         <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtQuestion" Margin="10,5,10,5" Height="18" HorizontalAlignment="Left" MinWidth="500"/>
         <DockPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,10,5">
             <TextBox DockPanel.Dock="Left" x:Name="picQuestion" Height="18"  MinWidth="420"/>
-            <Button DockPanel.Dock="Right" x:Name="btnPath" Content="Путь к файлу" Width="80" Height="20"></Button>
+            <Button DockPanel.Dock="Right" x:Name="btnPath" Content="Путь к файлу" Width="80" Height="20" Click="btnPath_Click"></Button>
         </DockPanel>
         <TextBox Grid.Row="3" Grid.Column="1" x:Name="txtAnswerOK" Margin="10,5,10,5" Height="18" HorizontalAlignment="Left" MinWidth="500"/>
         <TextBox Grid.Row="4" Grid.Column="1" x:Name="txtAnswerOKNo" Margin="10,5,10,5" Height="18" HorizontalAlignment="Left" MinWidth="500"/>
         <TextBox Grid.Row="5" Grid.Column="1" x:Name="txtAnswerNo" Margin="10,5,10,5" Height="18" HorizontalAlignment="Left" MinWidth="500"/>
         <TextBox Grid.Row="6" Grid.Column="1" x:Name="txtAnswerNoNo" Margin="10,5,10,5" Height="18" HorizontalAlignment="Left" MinWidth="500"/>
+
+        <Image x:Name="imgPic" Grid.Row="7" Grid.Column="0" Height="40" Width="40"></Image>
 
 
 

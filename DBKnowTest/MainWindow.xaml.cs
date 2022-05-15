@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,26 @@ namespace DBKnowTest
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnPath_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg =new OpenFileDialog();
+            dlg.InitialDirectory = "c:\\";
+            dlg.Filter = "Image files (*.jpg)|*.jpg|All Files (*.*)|*.*";
+            dlg.RestoreDirectory = true;
+
+            if (dlg.ShowDialog() == true)
+            {
+                string selectedFileName = dlg.FileName;
+                BitmapImage bi = new BitmapImage();
+                bi.BeginInit();
+                bi.UriSource = new Uri(selectedFileName);
+                bi.EndInit();
+                imgPic.Source= bi;
+
+
+            }
         }
     }
 }
