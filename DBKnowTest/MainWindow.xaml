@@ -7,6 +7,45 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.ColumnSpan="2" Grid.Row="0" Text="Вопрос:" HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Вопрос" Margin="10,5,10,5" Height="18" HorizontalAlignment="Right" Width="250" TextAlignment="Right"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Графическое изображение" Margin="10,5,10,5" Height="18" HorizontalAlignment="Right" Width="250" TextAlignment="Right"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Правильный ответ" Margin="10,5,10,5" Height="18" HorizontalAlignment="Right" Width="250" TextAlignment="Right"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Неправильный ответ, но похожий" Margin="10,5,10,5" Height="18" HorizontalAlignment="Right" Width="250" TextAlignment="Right"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Неправильный ответ" Margin="10,5,10,5" Height="18" HorizontalAlignment="Right" Width="250" TextAlignment="Right"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Неправильный ответ, очень далекий" Margin="10,5,10,5" Height="18" HorizontalAlignment="Right" Width="250" TextAlignment="Right"/>
+
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtQuestion" Margin="10,5,10,5" Height="18" HorizontalAlignment="Left" MinWidth="500"/>
+        <DockPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,10,5">
+            <TextBox DockPanel.Dock="Left" x:Name="picQuestion" Height="18"  MinWidth="420"/>
+            <Button DockPanel.Dock="Right" x:Name="btnPath" Content="Путь к файлу" Width="80" Height="20"></Button>
+        </DockPanel>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="txtAnswerOK" Margin="10,5,10,5" Height="18" HorizontalAlignment="Left" MinWidth="500"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="txtAnswerOKNo" Margin="10,5,10,5" Height="18" HorizontalAlignment="Left" MinWidth="500"/>
+        <TextBox Grid.Row="5" Grid.Column="1" x:Name="txtAnswerNo" Margin="10,5,10,5" Height="18" HorizontalAlignment="Left" MinWidth="500"/>
+        <TextBox Grid.Row="6" Grid.Column="1" x:Name="txtAnswerNoNo" Margin="10,5,10,5" Height="18" HorizontalAlignment="Left" MinWidth="500"/>
+
+
+
     </Grid>
+    
+    
 </Window>
