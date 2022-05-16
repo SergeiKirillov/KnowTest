@@ -39,6 +39,8 @@ namespace DBKnowTest
                 BitmapImage bi = new BitmapImage();
                 bi.BeginInit();
                 bi.UriSource = new Uri(selectedFileName);
+                picQuestion.Text=dlg.FileName;
+                txtBlockPath.Text=dlg.FileName;
                 bi.EndInit();
                 imgPic.Source= bi;
 
