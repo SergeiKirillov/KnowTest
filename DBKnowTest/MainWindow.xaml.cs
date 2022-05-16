@@ -38,9 +38,16 @@ namespace DBKnowTest
                 string selectedFileName = dlg.FileName;
                 BitmapImage bi = new BitmapImage();
                 bi.BeginInit();
-                bi.UriSource = new Uri(selectedFileName);
-                picQuestion.Text=dlg.FileName;
-                txtBlockPath.Text=dlg.FileName;
+                Uri fileuri = new Uri(selectedFileName);
+
+                bi.UriSource = fileuri;
+
+               
+                
+                string fileName = fileuri.Segments[fileuri.Segments.Length - 1];
+                string PathFile = fileuri.LocalPath.Replace(fileName,"");
+                picQuestion.Text = fileName;
+                txtBlockPath.Text= PathFile;
                 bi.EndInit();
                 imgPic.Source= bi;
 
